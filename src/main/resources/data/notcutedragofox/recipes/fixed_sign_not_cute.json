@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "notcutedragofox:sign_not_cute"
+    }
+  ],
+  "result": {
+    "item": "notcutedragofox:fixed_sign_not_cute"
+  }
+}

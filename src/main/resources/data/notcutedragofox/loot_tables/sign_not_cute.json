@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "sign_not_cute",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "notcutedragofox:sign_not_cute"
+        }
+      ]
+    }
+  ]
+}

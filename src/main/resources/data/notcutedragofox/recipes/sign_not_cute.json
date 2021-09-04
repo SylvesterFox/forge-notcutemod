@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "S#D",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:white_wool"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:feather"
+    },
+    "S": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "result": {
+    "item": "notcutedragofox:sign_not_cute",
+    "count": 1
+  }
+}

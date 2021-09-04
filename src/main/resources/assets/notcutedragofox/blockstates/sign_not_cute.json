@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "notcutedragofox:block/sign_not_cute" },
+    "facing=east":   { "model": "notcutedragofox:block/sign_not_cute", "y": 90 },
+    "facing=south":   { "model": "notcutedragofox:block/sign_not_cute", "y": 180 },
+    "facing=west":   { "model": "notcutedragofox:block/sign_not_cute", "y": 270 }
+  }
+}
