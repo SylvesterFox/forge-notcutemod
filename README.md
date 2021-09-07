@@ -1,2 +1,3 @@
-# forge-notcutemod
-Mod for dragofox
+# I'm not cute
+**Mod for dragofox**
+Favorite dragofox mod, adds his favorite not cute sign
