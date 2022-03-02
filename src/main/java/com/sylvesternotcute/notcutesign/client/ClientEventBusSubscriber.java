@@ -18,6 +18,7 @@ public class ClientEventBusSubscriber {
         event.setPhase(EventPriority.HIGHEST);
         RenderTypeLookup.setRenderLayer(InitBlocks.NOT_CUTE_SIGN.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(InitBlocks.FIXED_NOT_CUTE_SIGN.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(InitBlocks.BAD_DRAGON_KNOT.get(), RenderType.translucent());
     }
 
 }

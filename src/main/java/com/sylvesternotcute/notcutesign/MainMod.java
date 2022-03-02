@@ -1,6 +1,8 @@
 package com.sylvesternotcute.notcutesign;
 
+import com.sylvesternotcute.notcutesign.client.ClientHandler;
 import com.sylvesternotcute.notcutesign.init.InitBlocks;
+import com.sylvesternotcute.notcutesign.init.InitEntities;
 import com.sylvesternotcute.notcutesign.init.InitItem;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +32,7 @@ public class MainMod {
 
         InitItem.ITEMS.register(modEventBus);
         InitBlocks.BLOCKS.register(modEventBus);
+        InitEntities.REGISTER.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -38,8 +41,8 @@ public class MainMod {
 
     }
 
-    private  void doClientStuff(final FMLClientSetupEvent event) {
-
+    private void doClientStuff(final FMLClientSetupEvent event) {
+        ClientHandler.setup();
     }
 
     @SubscribeEvent

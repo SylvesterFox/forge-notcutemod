@@ -1,6 +1,6 @@
 package com.sylvesternotcute.notcutesign.blocks;
 
-
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
@@ -18,8 +18,7 @@ import net.minecraft.world.IBlockReader;
 import java.util.List;
 import java.util.stream.Stream;
 
-
-public class NotCuteSign extends CustomShapeBlock  {
+public class FixedNotCuteSign extends CustomShapeBlock{
 
     private static final VoxelShape SHAPE = Stream.of(
             Block.box(1, 21, 8, 15, 22, 9),
@@ -31,7 +30,8 @@ public class NotCuteSign extends CustomShapeBlock  {
             Block.box(1, 12, 7, 15, 22, 8)
     ).reduce((v1, v2) -> VoxelShapes.join(v1, v2, IBooleanFunction.OR)).get();
 
-    public NotCuteSign(Properties properties) {
+    public FixedNotCuteSign(Properties properties)
+    {
         super(properties);
         runCalculation(SHAPE);
     }
@@ -41,11 +41,10 @@ public class NotCuteSign extends CustomShapeBlock  {
         return SHAPES.get(this).get(state.getValue(HORIZONTAL_FACING));
     }
 
-
     @Override
-    public void appendHoverText(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flag) {
-        tooltip.add(new TranslationTextComponent("notcutedragofox.not_cute_sign.here").withStyle(TextFormatting.RED));
+    public void appendHoverText(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flag)
+    {
+        tooltip.add(new TranslationTextComponent("notcutedragofox.fixed_not_cute_sign.here").withStyle(TextFormatting.GOLD));
         super.appendHoverText(stack, worldIn, tooltip, flag);
     }
-
 }

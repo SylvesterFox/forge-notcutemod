@@ -7,7 +7,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class InitItemGroup {
 
-    public static ItemGroup createGruop(String id, RegistryObject<Item> icon) {
+    public static ItemGroup createGroup(String id, RegistryObject<Item> icon) {
         return new ItemGroup(id) {
             @Override
             public ItemStack makeIcon() {
@@ -16,5 +16,5 @@ public class InitItemGroup {
         };
     }
 
-    public static ItemGroup NOT_CUTE_TAB = createGruop("not_cute_tab", InitItem.NOT_CUTE_SIGN);
+    public static ItemGroup NOT_CUTE_TAB = createGroup("not_cute_tab", InitItem.ROGUELIKE);
 }
