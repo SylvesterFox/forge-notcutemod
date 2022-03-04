@@ -6,5 +6,7 @@
   "notcutedragofox.not_cute_sign.here": "I'm not cute!",
   "notcutedragofox.fixed_not_cute_sign.here": "I'M §mNOT§r §lCUTE! §r(FIXING SING)",
   "notcutedragofox.roguelike.here": "The roguelike",
-  "block.notcutedragofox.bad_dragon_knot": "BadDragon Knot"
+  "block.notcutedragofox.bad_dragon_knot": "BadDragon Knot",
+  "item.notcutedragofox.berry_jam": "§bBerry Jam",
+  "item.notcutedragofox.cream_bucket": "Cream Bucket"
 }

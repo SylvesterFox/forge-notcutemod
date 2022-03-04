@@ -1,6 +1,8 @@
 package com.sylvesternotcute.notcutesign.init;
 
 import com.sylvesternotcute.notcutesign.MainMod;
+import com.sylvesternotcute.notcutesign.items.BerryJam;
+import com.sylvesternotcute.notcutesign.items.CreamBucket;
 import com.sylvesternotcute.notcutesign.items.Roguelike;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
@@ -24,5 +26,9 @@ public class InitItem {
     // items
     public static final RegistryObject<Item> ROGUELIKE = ITEMS.register("roguelike", () ->
             new Roguelike(PropertiesInit.ROGUELIKE));
+    public static final RegistryObject<Item> BERRY_JAM = ITEMS.register("berry_jam", () ->
+            new BerryJam(PropertiesInit.BERRY_JAM));
+    public static final RegistryObject<Item> CREAM_BUCKET = ITEMS.register("cream_bucket", () ->
+            new CreamBucket(PropertiesInit.CREAM_BUCKET));
 
 }

@@ -6,5 +6,7 @@
   "notcutedragofox.not_cute_sign.here": "Я НЕ МИЛЫй!",
   "notcutedragofox.fixed_not_cute_sign.here": "§lЯ §mНЕ§r §lМИЛЫЙ!(ИСПРАВЛЕНАЯ ТАБЛИЧКА)",
   "notcutedragofox.roguelike.here": "Обычный рогалик. Драколисы любят рогалики.",
-  "block.notcutedragofox.bad_dragon_knot": "Особый рогалик"
+  "block.notcutedragofox.bad_dragon_knot": "Особый рогалик",
+  "item.notcutedragofox.berry_jam": "§bЯгодное варенье",
+  "item.notcutedragofox.cream_bucket": "Ведро сливок"
 }

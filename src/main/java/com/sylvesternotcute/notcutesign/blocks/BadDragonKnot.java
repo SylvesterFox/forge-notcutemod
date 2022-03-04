@@ -49,7 +49,7 @@ public class BadDragonKnot extends CustomShapeBlock
     @Override
     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity playerEntity, Hand hand, BlockRayTraceResult result)
     {
-        return SeatEntity.create(world, pos, 0.2, playerEntity);
+        return SeatEntity.create(world, pos, -0.2, playerEntity);
     }
 
 }
