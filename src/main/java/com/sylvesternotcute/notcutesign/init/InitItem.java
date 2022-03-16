@@ -4,6 +4,7 @@ import com.sylvesternotcute.notcutesign.MainMod;
 import com.sylvesternotcute.notcutesign.items.BerryJam;
 import com.sylvesternotcute.notcutesign.items.CreamBucket;
 import com.sylvesternotcute.notcutesign.items.Roguelike;
+import com.sylvesternotcute.notcutesign.items.custom.FennecEgg;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Foods;
@@ -30,5 +31,8 @@ public class InitItem {
             new BerryJam(PropertiesInit.BERRY_JAM));
     public static final RegistryObject<Item> CREAM_BUCKET = ITEMS.register("cream_bucket", () ->
             new CreamBucket(PropertiesInit.CREAM_BUCKET));
+
+    // egg item
+    public static final RegistryObject<Item> FENNEC_EGG = ITEMS.register("fennec_egg", () -> new FennecEgg(PropertiesInit.FENNEC_EGG));
 
 }

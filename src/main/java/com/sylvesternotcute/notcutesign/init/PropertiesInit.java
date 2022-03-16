@@ -36,4 +36,7 @@ public class PropertiesInit {
     // items
     public static final Item.Properties CREAM_BUCKET = new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1);
 
+    // items egg
+    public static final Item.Properties FENNEC_EGG = new Item.Properties().stacksTo(1).tab(InitItemGroup.NOT_CUTE_TAB);
+
 }

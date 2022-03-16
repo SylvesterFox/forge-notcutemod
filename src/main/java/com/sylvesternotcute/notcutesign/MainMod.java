@@ -1,13 +1,17 @@
 package com.sylvesternotcute.notcutesign;
 
 import com.sylvesternotcute.notcutesign.client.ClientHandler;
+import com.sylvesternotcute.notcutesign.client.renderer.FennecRenderer;
+import com.sylvesternotcute.notcutesign.entity.custom.FennecFoxEntity;
 import com.sylvesternotcute.notcutesign.init.InitBlocks;
 import com.sylvesternotcute.notcutesign.init.InitEntities;
 import com.sylvesternotcute.notcutesign.init.InitItem;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -29,6 +33,8 @@ public class MainMod {
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+        modEventBus.addListener(this::onAttributeCreate);
+
 
         InitItem.ITEMS.register(modEventBus);
         InitBlocks.BLOCKS.register(modEventBus);
@@ -39,9 +45,16 @@ public class MainMod {
 
     private void setup(final FMLCommonSetupEvent event) {
 
+
+    }
+
+    public void onAttributeCreate(EntityAttributeCreationEvent event)
+    {
+        event.put(InitEntities.FENNEC_FOX.get(), FennecFoxEntity.setCustomAttributes().build());
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        RenderingRegistry.registerEntityRenderingHandler(InitEntities.FENNEC_FOX.get(), FennecRenderer::new);
         ClientHandler.setup();
     }
 
