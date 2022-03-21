@@ -8,5 +8,7 @@
   "notcutedragofox.roguelike.here": "Обычный рогалик. Драколисы любят рогалики.",
   "block.notcutedragofox.bad_dragon_knot": "Особый рогалик",
   "item.notcutedragofox.berry_jam": "§bЯгодное варенье",
-  "item.notcutedragofox.cream_bucket": "Ведро сливок"
+  "item.notcutedragofox.cream_bucket": "Ведро сливок",
+  "item.notcutedragofox.cheese_item": "Сыр",
+  "block.notcutedragofox.cheese_block": "Блок Сыра"
 }

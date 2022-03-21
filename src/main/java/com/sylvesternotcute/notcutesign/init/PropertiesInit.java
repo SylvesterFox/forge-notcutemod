@@ -25,6 +25,10 @@ public class PropertiesInit {
             .sound(SoundType.HONEY_BLOCK)
             .harvestTool(ToolType.PICKAXE);
 
+    public static final AbstractBlock.Properties CHEESE_BLOCK = AbstractBlock.Properties.of(Material.CAKE)
+            .strength(0.2f)
+            .sound(SoundType.WOOL);
+
 
     // items foods
     public static final Item.Properties ROGUELIKE = new Item.Properties().food(new
@@ -32,6 +36,8 @@ public class PropertiesInit {
 
     public static final Item.Properties BERRY_JAM = new Item.Properties().food(new Food.Builder()
             .effect(() -> new EffectInstance(Effects.REGENERATION, 200, 1), 1.0f).nutrition(5).saturationMod(0.4f).build());
+
+    public static final Item.Properties CHEESE = new Item.Properties().food(new Food.Builder().nutrition(5).saturationMod(2.5f).build());
 
     // items
     public static final Item.Properties CREAM_BUCKET = new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1);

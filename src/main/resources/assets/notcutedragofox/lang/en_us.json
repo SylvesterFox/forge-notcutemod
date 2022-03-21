@@ -8,5 +8,8 @@
   "notcutedragofox.roguelike.here": "The roguelike",
   "block.notcutedragofox.bad_dragon_knot": "BadDragon Knot",
   "item.notcutedragofox.berry_jam": "§bBerry Jam",
-  "item.notcutedragofox.cream_bucket": "Cream Bucket"
+  "item.notcutedragofox.cream_bucket": "Cream Bucket",
+  "item.notcutedragofox.cheese_item": "Cheese",
+  "item.notcutedragofox.fennec_egg": "Fennec Spawn Egg",
+  "block.notcutedragofox.cheese_block": "Block Cheese"
 }

@@ -2,6 +2,7 @@ package com.sylvesternotcute.notcutesign.init;
 
 import com.sylvesternotcute.notcutesign.MainMod;
 import com.sylvesternotcute.notcutesign.items.BerryJam;
+import com.sylvesternotcute.notcutesign.items.Cheese;
 import com.sylvesternotcute.notcutesign.items.CreamBucket;
 import com.sylvesternotcute.notcutesign.items.Roguelike;
 import com.sylvesternotcute.notcutesign.items.custom.FennecEgg;
@@ -23,6 +24,8 @@ public class InitItem {
             new BlockItem(InitBlocks.FIXED_NOT_CUTE_SIGN.get(), new Item.Properties().tab(InitItemGroup.NOT_CUTE_TAB)));
     public static final RegistryObject<Item> BAD_DRAGON_KNOT = ITEMS.register("bad_dragon_knot", () ->
             new BlockItem(InitBlocks.BAD_DRAGON_KNOT.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CHEESE_BLOCK = ITEMS.register("cheese_block", () ->
+            new BlockItem(InitBlocks.CHEESE_BLOCK.get(), new Item.Properties().tab(InitItemGroup.NOT_CUTE_TAB)));
 
     // items
     public static final RegistryObject<Item> ROGUELIKE = ITEMS.register("roguelike", () ->
@@ -31,6 +34,7 @@ public class InitItem {
             new BerryJam(PropertiesInit.BERRY_JAM));
     public static final RegistryObject<Item> CREAM_BUCKET = ITEMS.register("cream_bucket", () ->
             new CreamBucket(PropertiesInit.CREAM_BUCKET));
+    public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese_item", () -> new Cheese(PropertiesInit.CHEESE));
 
     // egg item
     public static final RegistryObject<Item> FENNEC_EGG = ITEMS.register("fennec_egg", () -> new FennecEgg(PropertiesInit.FENNEC_EGG));
