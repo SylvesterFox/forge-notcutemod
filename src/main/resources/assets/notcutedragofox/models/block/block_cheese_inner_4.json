@@ -1,0 +1,14 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "notcutedragofox:blocks/cheese_textures/texture_cheese_1"
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": []
+		}
+	]
+}

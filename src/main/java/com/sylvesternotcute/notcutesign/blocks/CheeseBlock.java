@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
@@ -17,32 +16,31 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 
+
 public class CheeseBlock extends Block {
-    public static final IntegerProperty BITES = BlockStateProperties.BITES;
-    protected static final VoxelShape[] SHAPE_BY_BITES = new VoxelShape[]{
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D),
-            Block.box(3.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D),
-            Block.box(5.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D),
-            Block.box(7.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D),
-            Block.box(9.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D),
-            Block.box(11.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D),
-            Block.box(13.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D)
-    };
+    public static final IntegerProperty BITES_CHEESE = IntegerProperty.create("bites_cheese", 0, 3);
+    private static final VoxelShape BITES_CHEESE_0 = Block.box(4, 0, 4, 8, 4, 8);
+    private static final VoxelShape BITES_CHEESE_1 = Block.box(4, 0, 8, 8, 4, 12);
+    private static final VoxelShape BITES_CHEESE_2 = Block.box(8, 0, 8, 12, 4, 12);
+    private static final VoxelShape BITES_CHEESE_3 = Block.box(8, 0, 4, 12, 4, 8);
+    private static final VoxelShape CHEESE_BLOCK = VoxelShapes.or(BITES_CHEESE_0, BITES_CHEESE_1, BITES_CHEESE_2, BITES_CHEESE_3);
+
 
     public CheeseBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(BITES, Integer.valueOf(0)));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(BITES_CHEESE, Integer.valueOf(0)));
 
     }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos blockPos, ISelectionContext context) {
-        return SHAPE_BY_BITES[state.getValue(BITES)];
+        return state.getValue(BITES_CHEESE) > 4 ? BITES_CHEESE_0 : CHEESE_BLOCK;
     }
 
     @Override
@@ -69,9 +67,9 @@ public class CheeseBlock extends Block {
         } else {
             entity.awardStat(Stats.EAT_CAKE_SLICE);
             entity.getFoodData().eat(2, 0.3f);
-            int i = state.getValue(BITES);
-            if (i < 6) {
-                iWorld.setBlock(blockPos, state.setValue(BITES, Integer.valueOf(i + 1)), 3);
+            int i = state.getValue(BITES_CHEESE);
+            if (i < 3) {
+                iWorld.setBlock(blockPos, state.setValue(BITES_CHEESE, Integer.valueOf(i + 1)), 3);
             } else {
                 iWorld.removeBlock(blockPos, false);
             }
@@ -93,12 +91,12 @@ public class CheeseBlock extends Block {
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> p_206840_1_) {
         super.createBlockStateDefinition(p_206840_1_);
-        p_206840_1_.add(BITES);
+        p_206840_1_.add(BITES_CHEESE);
     }
 
     @Override
     public int getAnalogOutputSignal(BlockState state, World world, BlockPos blockPos) {
-        return (7 - state.getValue(BITES)) * 2;
+        return (4 - state.getValue(BITES_CHEESE)) * 2;
     }
 
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -108,5 +106,6 @@ public class CheeseBlock extends Block {
     public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathType) {
         return false;
     }
+
 
 }

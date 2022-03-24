@@ -28,6 +28,7 @@ public class ClientHandler
         RenderTypeLookup.setRenderLayer(InitBlocks.NOT_CUTE_SIGN.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(InitBlocks.FIXED_NOT_CUTE_SIGN.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(InitBlocks.BAD_DRAGON_KNOT.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(InitBlocks.CHEESE_BLOCK.get(), RenderType.translucent());
     }
 
 

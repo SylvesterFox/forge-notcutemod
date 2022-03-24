@@ -1,25 +1,16 @@
 {
   "variants" : {
-    "bites=0": {
-      "model": "notcutedragofox:block/cheese_block"
+    "bites_cheese=0": {
+      "model": "notcutedragofox:block/block_cheese"
     },
-    "bites=1": {
-      "model": "notcutedragofox:block/cheese_slice1"
+    "bites_cheese=1": {
+      "model": "notcutedragofox:block/block_cheese_inner_1"
     },
-    "bites=2": {
-      "model": "notcutedragofox:block/cheese_slice2"
+    "bites_cheese=2": {
+      "model": "notcutedragofox:block/block_cheese_inner_2"
     },
-    "bites=3": {
-      "model": "notcutedragofox:block/cheese_slice3"
-    },
-    "bites=4": {
-      "model": "notcutedragofox:block/cheese_slice4"
-    },
-    "bites=5": {
-      "model": "notcutedragofox:block/cheese_slice5"
-    },
-    "bites=6": {
-      "model": "notcutedragofox:block/cheese_slice6"
+    "bites_cheese=3": {
+      "model": "notcutedragofox:block/block_cheese_inner_3"
     }
   }
 }
