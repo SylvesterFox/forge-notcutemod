@@ -3,6 +3,7 @@
 	"textures": {
 		"particle": "notcutedragofox:blocks/cheese_textures/texture_cheese_1"
 	},
+	"display": {},
 	"groups": [
 		{
 			"name": "VoxelShapes",

@@ -6,7 +6,11 @@ import com.sylvesternotcute.notcutesign.entity.custom.FennecFoxEntity;
 import com.sylvesternotcute.notcutesign.init.InitBlocks;
 import com.sylvesternotcute.notcutesign.init.InitEntities;
 import com.sylvesternotcute.notcutesign.init.InitItem;
+import com.sylvesternotcute.notcutesign.items.custom.ModSpawnEgg;
+import net.minecraft.entity.EntityType;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -48,10 +52,11 @@ public class MainMod {
 
     }
 
-    public void onAttributeCreate(EntityAttributeCreationEvent event)
+    private void onAttributeCreate(EntityAttributeCreationEvent event)
     {
         event.put(InitEntities.FENNEC_FOX.get(), FennecFoxEntity.setCustomAttributes().build());
     }
+
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderingRegistry.registerEntityRenderingHandler(InitEntities.FENNEC_FOX.get(), FennecRenderer::new);
@@ -60,6 +65,11 @@ public class MainMod {
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {}
+
+    @SubscribeEvent
+    public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event) {
+        ModSpawnEgg.initUnaddedEggs();
+    }
 
 
 }

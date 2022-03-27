@@ -25,10 +25,10 @@ import net.minecraft.world.World;
 
 public class CheeseBlock extends Block {
     public static final IntegerProperty BITES_CHEESE = IntegerProperty.create("bites_cheese", 0, 3);
-    private static final VoxelShape BITES_CHEESE_0 = Block.box(4, 0, 4, 8, 4, 8);
-    private static final VoxelShape BITES_CHEESE_1 = Block.box(4, 0, 8, 8, 4, 12);
-    private static final VoxelShape BITES_CHEESE_2 = Block.box(8, 0, 8, 12, 4, 12);
-    private static final VoxelShape BITES_CHEESE_3 = Block.box(8, 0, 4, 12, 4, 8);
+    private static final VoxelShape BITES_CHEESE_0 = Block.box(2, 0, 2, 8, 6, 8);
+    private static final VoxelShape BITES_CHEESE_1 = Block.box(2, 0, 8, 8, 6, 14);
+    private static final VoxelShape BITES_CHEESE_2 = Block.box(8, 0, 8, 14, 6, 14);
+    private static final VoxelShape BITES_CHEESE_3 = Block.box(8, 0, 2, 14, 6, 8);
     private static final VoxelShape CHEESE_BLOCK = VoxelShapes.or(BITES_CHEESE_0, BITES_CHEESE_1, BITES_CHEESE_2, BITES_CHEESE_3);
 
 
@@ -66,7 +66,7 @@ public class CheeseBlock extends Block {
             return ActionResultType.PASS;
         } else {
             entity.awardStat(Stats.EAT_CAKE_SLICE);
-            entity.getFoodData().eat(2, 0.3f);
+            entity.getFoodData().eat(5, 2.5f);
             int i = state.getValue(BITES_CHEESE);
             if (i < 3) {
                 iWorld.setBlock(blockPos, state.setValue(BITES_CHEESE, Integer.valueOf(i + 1)), 3);

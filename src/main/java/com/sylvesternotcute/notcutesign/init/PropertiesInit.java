@@ -4,10 +4,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.AbstractMapItem;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -41,8 +38,8 @@ public class PropertiesInit {
 
     // items
     public static final Item.Properties CREAM_BUCKET = new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1);
-
+    public static final Item.Properties KNIFE = new Item.Properties().stacksTo(1).tab(InitItemGroup.NOT_CUTE_TAB).durability(60);
     // items egg
-    public static final Item.Properties FENNEC_EGG = new Item.Properties().stacksTo(1).tab(InitItemGroup.NOT_CUTE_TAB);
+    public static final Item.Properties FENNEC_EGG = new Item.Properties().tab(InitItemGroup.NOT_CUTE_TAB);
 
 }

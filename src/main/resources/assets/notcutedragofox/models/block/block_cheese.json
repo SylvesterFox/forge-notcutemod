@@ -9,8 +9,8 @@
 	},
 	"elements": [
 		{
-			"from": [4, 0, 4],
-			"to": [8, 4, 8],
+			"from": [2, 0, 2],
+			"to": [8, 6, 8],
 			"faces": {
 				"north": {"uv": [0, 0, 4, 4], "texture": "#3"},
 				"east": {"uv": [0, 4, 4, 8], "texture": "#3"},
@@ -21,8 +21,8 @@
 			}
 		},
 		{
-			"from": [4, 0, 8],
-			"to": [8, 4, 12],
+			"from": [2, 0, 8],
+			"to": [8, 6, 14],
 			"faces": {
 				"north": {"uv": [0, 0, 4, 4], "texture": "#0"},
 				"east": {"uv": [0, 4, 4, 8], "texture": "#0"},
@@ -34,7 +34,7 @@
 		},
 		{
 			"from": [8, 0, 8],
-			"to": [12, 4, 12],
+			"to": [14, 6, 14],
 			"faces": {
 				"north": {"uv": [0, 0, 4, 4], "texture": "#1"},
 				"east": {"uv": [0, 4, 4, 8], "texture": "#1"},
@@ -45,8 +45,8 @@
 			}
 		},
 		{
-			"from": [8, 0, 4],
-			"to": [12, 4, 8],
+			"from": [8, 0, 2],
+			"to": [14, 6, 8],
 			"faces": {
 				"north": {"uv": [0, 0, 4, 4], "texture": "#2"},
 				"east": {"uv": [0, 4, 4, 8], "texture": "#2"},
@@ -57,9 +57,10 @@
 			}
 		}
 	],
+	"display": {},
 	"groups": [
 		{
-			"name": "VoxelShape",
+			"name": "VoxelShapes",
 			"origin": [8, 8, 8],
 			"color": 0,
 			"children": [0, 1, 2, 3]

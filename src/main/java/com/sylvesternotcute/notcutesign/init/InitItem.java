@@ -1,15 +1,9 @@
 package com.sylvesternotcute.notcutesign.init;
 
 import com.sylvesternotcute.notcutesign.MainMod;
-import com.sylvesternotcute.notcutesign.items.BerryJam;
-import com.sylvesternotcute.notcutesign.items.Cheese;
-import com.sylvesternotcute.notcutesign.items.CreamBucket;
-import com.sylvesternotcute.notcutesign.items.Roguelike;
-import com.sylvesternotcute.notcutesign.items.custom.FennecEgg;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Food;
-import net.minecraft.item.Foods;
-import net.minecraft.item.Item;
+import com.sylvesternotcute.notcutesign.items.*;
+import com.sylvesternotcute.notcutesign.items.custom.ModSpawnEgg;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,8 +29,10 @@ public class InitItem {
     public static final RegistryObject<Item> CREAM_BUCKET = ITEMS.register("cream_bucket", () ->
             new CreamBucket(PropertiesInit.CREAM_BUCKET));
     public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese_item", () -> new Cheese(PropertiesInit.CHEESE));
+    public static final RegistryObject<Item> KNIFE = ITEMS.register("knife", () -> new ItemKnife(ItemTier.IRON, 1, 24f, PropertiesInit.KNIFE));
+
 
     // egg item
-    public static final RegistryObject<Item> FENNEC_EGG = ITEMS.register("fennec_egg", () -> new FennecEgg(PropertiesInit.FENNEC_EGG));
+    public static final RegistryObject<ModSpawnEgg> FENNEC_EGG = ITEMS.register("fennec_egg", () -> new ModSpawnEgg(InitEntities.FENNEC_FOX, 0xFFBE73, 0xEA6900, PropertiesInit.FENNEC_EGG));
 
 }
